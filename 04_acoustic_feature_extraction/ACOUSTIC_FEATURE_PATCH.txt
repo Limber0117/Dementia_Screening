@@ -1,0 +1,17 @@
+
+# === PATCH: integrate clinical denoising ===
+from clinical_denoise_pipeline import clinical_denoise_audio
+
+def preprocess_for_features(self, audio_path: str):
+    audio, sr = self._load_audio(audio_path)
+
+    # Clinical-grade denoising (no silence removal)
+    audio = clinical_denoise_audio(audio, sr, self.config)
+
+    # RMS normalization (unchanged)
+    target = self.config.get("normalization", {}).get("target_rms", 0.05)
+    cur = np.sqrt(np.mean(audio ** 2)) if audio.size > 0 else 0.0
+    if cur > 0:
+        audio = audio * (target / cur)
+
+    return audio, sr

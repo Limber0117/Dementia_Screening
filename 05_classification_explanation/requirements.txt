@@ -1,0 +1,34 @@
+# Dementia Evaluation System - Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+pandas>=2.0.0
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# LLM Provider SDKs
+# Uncomment the ones you need:
+
+# OpenAI (ChatGPT)
+openai>=1.0.0
+
+# Anthropic (Claude)
+anthropic>=0.18.0
+
+# Google (Gemini)
+google-generativeai>=0.4.0
+
+# DeepSeek (uses OpenAI SDK)
+# Already covered by openai package above
+
+# Ollama (local models, uses requests)
+requests>=2.28.0
+
+# Optional: For development and testing
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# mypy>=1.0.0
+
+#Audio processing
+mutagen>=1.47.0
