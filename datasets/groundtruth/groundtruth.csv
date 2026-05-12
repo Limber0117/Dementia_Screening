@@ -1,0 +1,7 @@
+Please put your groundtruth file here in the format of:
+
+
+PID	filename	language	age	gender	diagnosis
+a-00064716-1	a-00064716-1.txt	eng	82	male	Impairment
+
+
