@@ -5,5 +5,5 @@ An LLM-based cognitive impairment screening framework that elevates LLMs from fe
 
 -----------------------
 
-Paper submitted to ACM MM'26
+We used the DementiaBank dataset. According to the policy, we cannot republish the dataset. Please refer to https://talkbank.org/dementia/ to access the original dataset. This project only provides our prototype of the proposed framework.
 
